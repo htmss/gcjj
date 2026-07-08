@@ -1,167 +1,479 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404页面</title>
-<style>
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700');
-@import url('https://fonts.googleapis.com/css?family=Catamaran:400,800');
-.error-container {
-  text-align: center;
-  font-size: 106px;
-  font-family: 'Catamaran', sans-serif;
-  font-weight: 800;
-  margin: 70px 15px;
-}
-.error-container > span {
-  display: inline-block;
-  position: relative;
-}
-.error-container > span.four {
-  width: 136px;
-  height: 43px;
-  border-radius: 999px;
-  background:
-    linear-gradient(140deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.07) 43%, transparent 44%, transparent 100%),
-    linear-gradient(105deg, transparent 0%, transparent 40%, rgba(0, 0, 0, 0.06) 41%, rgba(0, 0, 0, 0.07) 76%, transparent 77%, transparent 100%),
-    linear-gradient(to right, #d89ca4, #e27b7e);
-}
-.error-container > span.four:before,
-.error-container > span.four:after {
-  content: '';
-  display: block;
-  position: absolute;
-  border-radius: 999px;
-}
-.error-container > span.four:before {
-  width: 43px;
-  height: 156px;
-  left: 60px;
-  bottom: -43px;
-  background:
-    linear-gradient(128deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.07) 40%, transparent 41%, transparent 100%),
-    linear-gradient(116deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.07) 50%, transparent 51%, transparent 100%),
-    linear-gradient(to top, #99749D, #B895AB, #CC9AA6, #D7969E, #E0787F);
-}
-.error-container > span.four:after {
-  width: 137px;
-  height: 43px;
-  transform: rotate(-49.5deg);
-  left: -18px;
-  bottom: 36px;
-  background: linear-gradient(to right, #99749D, #B895AB, #CC9AA6, #D7969E, #E0787F);
-}
-
-.error-container > span.zero {
-  vertical-align: text-top;
-  width: 156px;
-  height: 156px;
-  border-radius: 999px;
-  background: linear-gradient(-45deg, transparent 0%, rgba(0, 0, 0, 0.06) 50%,  transparent 51%, transparent 100%),
-    linear-gradient(to top right, #99749D, #99749D, #B895AB, #CC9AA6, #D7969E, #ED8687, #ED8687);
-  overflow: hidden;
-  animation: bgshadow 5s infinite;
-}
-.error-container > span.zero:before {
-  content: '';
-  display: block;
-  position: absolute;
-  transform: rotate(45deg);
-  width: 90px;
-  height: 90px;
-  background-color: transparent;
-  left: 0px;
-  bottom: 0px;
-  background:
-    linear-gradient(95deg, transparent 0%, transparent 8%, rgba(0, 0, 0, 0.07) 9%, transparent 50%, transparent 100%),
-    linear-gradient(85deg, transparent 0%, transparent 19%, rgba(0, 0, 0, 0.05) 20%, rgba(0, 0, 0, 0.07) 91%, transparent 92%, transparent 100%);
-}
-.error-container > span.zero:after {
-  content: '';
-  display: block;
-  position: absolute;
-  border-radius: 999px;
-  width: 70px;
-  height: 70px;
-  left: 43px;
-  bottom: 43px;
-  background: #FDFAF5;
-  box-shadow: -2px 2px 2px 0px rgba(0, 0, 0, 0.1);
-}
-
-.screen-reader-text {
-    position: absolute;
-    top: -9999em;
-    left: -9999em;
-}
+    <!-- ===== 基础字符与视口 ===== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 让手机浏览器顶部状态栏颜色与网站主题色匹配 -->
+    <meta name="theme-color" content="#1a1a2e" />
+    <!-- 防止手机自动将数字识别为电话（如果不需要自动拨号功能） -->
+    <meta name="format-detection" content="telephone=no" />
+    <!-- ===== 页面标题（关键词前置） ===== -->
+    <title>AI长视频制作 | 微电影·宣传片·短剧定制 | 你的银幕故事 | OC影视</title>
     
-@keyframes bgshadow {
-  0% {
-    box-shadow: inset -160px 160px 0px 5px rgba(0, 0, 0, 0.4);
-  }
-  45% {
-    box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
-  }
-  55% {
-    box-shadow: inset 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
-  }
-  100% {
-    box-shadow: inset 160px -160px 0px 5px rgba(0, 0, 0, 0.4);
-  }
-}
+    <!-- ===== SEO 核心标签 ===== -->
+    <meta name="description" content="OC影视提供AI长视频制作服务：个人纪念日微电影、企业宣传片、婚礼MV、短剧、电影等，从剧本到成片一站式定制。" />
+    <meta name="keywords" content="AI电影定制,微电影制作,企业宣传片,短剧定制,纪念日影片" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://oc-film.com/" />
+    
+    <!-- ===== 社交媒体分享图片（多图） ===== -->
+    <!-- 主图  ===== Open Graph（社交媒体分享预览） ===== -->
+    <meta property="og:title" content="OC电影定制 · 个人专属影片制作" />
+    <meta property="og:description" content="AI长视频制作，纪念日微电影、企业宣传片、短剧一站式定制 — 你的银幕梦想，从这里开始。" />
+    <meta property="og:url" content="https://oc-film.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="OC影视" />
 
-/* demo stuff */
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-body {
-  background-color: #FDFAF5;
-  margin-bottom: 50px;
-}
-html, button, input, select, textarea {
-    font-family: 'Montserrat', Helvetica, sans-serif;
-    color: #bbb;
-}
-h1 {
-  text-align: center;
-  margin: 30px 15px;
-}
-.zoom-area { 
-  max-width: 490px;
-  margin: 30px auto 30px;
-  font-size: 19px;
-  text-align: center;
-}
-.link-container {
-  text-align: center;
-}
-a.more-link {
-  text-transform: uppercase;
-  font-size: 13px;
-    background-color: #de7e85;
-    padding: 10px 15px;
-    border-radius: 0;
-    color: #fff;
-    display: inline-block;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    line-height: 1.5;
-    text-decoration: none;
-  margin-top: 50px;
-  letter-spacing: 1px;
-}
-</style>
+    <!-- 多张分享图（只换 image 链接） -->
+    <meta property="og:image" content="https://www.oc-film.com/images/og-preview-1.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta property="og:image" content="https://www.oc-film.com/images/og-preview-2.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta property="og:image" content="https://www.oc-film.com/images/og-preview-3.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    
+    <!-- ===== Twitter Card ===== -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="OC电影定制 · 个人专属影片制作" />
+    <meta name="twitter:description" content="微电影、企业宣传片，一站式定制AI生成式电影，短剧 — 为你打造独一无二的银幕梦想。" />
+    <meta name="twitter:image" content="https://www.oc-film.com/images/og-preview-1.jpg" />
+    
+    <!-- ===== 结构化数据（JSON-LD）让搜索结果展示星级/价格/时间 ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "OC电影定制服务",
+        "description": "提供个人纪念日微电影、企业宣传片、婚礼MV、短剧、电影等专业影片制作服务",
+        "provider": {
+            "@type": "Organization",
+            "name": "OC电影定制"
+        },
+        "serviceType": "影片制作",
+        "areaServed": "全球",
+        "availableLanguage": ["中文", "English"]
+    }
+    </script>
+    
+    <!-- ===== Google Font & Font Awesome ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+    <!-- ===== 网站图标 ===== -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
+    <!-- ===== 你的自定义CSS ===== -->
+    <link rel="stylesheet" href="style.css" />
+</head>
 <body>
-<h1>404 Error Page #2</h1>
 
-<section class="error-container">
-  <span class="four"><span class="screen-reader-text">4</span></span>
-  <span class="zero"><span class="screen-reader-text">0</span></span>
-  <span class="four"><span class="screen-reader-text">4</span></span>
+    <!-- ===== 导航 ===== -->
+    <nav class="container navbar">
+        <a href="https://oc-film.com"><div class="logo">OC-FILM</div></a>
+        <div class="nav-links"> 
+            <a href="#pricing">套餐</a>
+            <a href="#process">流程</a><!---->
+            <a href="#faq">FAQ</a>
+            <a href="#lx">联系</a>
+            <a href="javascript:void(0)" onclick="scrollToCalculator()" class="nav-cta"><i class="fas fa-film" style="margin-right: 6px;"></i> 立即定制</a>
+
+            <!-- 导航栏按钮 -->
+
+        </div>
+    </nav>
+
+    <!-- ===== 首屏 ===== -->
+    <section class="container hero">
+        <div class="hero-badge">
+            <i class="fas fa-crown"></i> AI 影视制作 · 2026 先锋计划
+        </div>
+        <h1>
+            <span class="highlight">
+            OC 电影 · AI 执镜</span><br />用智能，雕刻属于你的银幕故事
+            <span style="display:block; font-size:0.3em; font-weight:400; color:#aaa; margin-top:12px; letter-spacing:1px;">
+    电影 · 宣传片 · 短剧 · 长片
+  </span>
+        </h1>
+        <p class="hero-sub">
+           90 分钟光影之旅 · 4K 视觉 · 真人或 AI 共演 · 你的故事，由你定制
+        </p>
+        <div class="hero-actions">
+            <a href="#pricing" class="btn-primary"><i class="fas fa-play" style="margin-right: 10px;"></i> 查看套餐</a>
+            <a href="#calculator" class="btn-secondary"><i class="fas fa-calculator"></i> 算算你的报价</a>
+        </div>
+    </section>
+
+
+    <!-- ===== 痛点 / 愿景 ===== -->
+    <section class="pain-points">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 12px;">
+                <span class="section-label">让梦想照进现实</span>
+                <h2 class="section-title">你的故事，值得上万千银幕</h2>
+            </div>
+            <div class="pain-grid">
+                <div class="pain-item">
+                    <i class="fas fa-pen-fancy"></i>
+                    <h3>写了那么多故事</h3>
+                    <p>是时候让笔下的 OC 真正动起来了。不是插图，不是文字，是 >90 分钟的电影。</p>
+                </div>
+                <div class="pain-item">
+                    <i class="fas fa-crown"></i>
+                    <h3>你有粉丝，有影响力</h3>
+                    <p>网红、博主、小明星——你缺的不是流量，是一部能拿得出手的代表作、拉开差距、建立个人品牌。</p>
+                </div>
+                <div class="pain-item">
+                    <i class="fas fa-book-open"></i>
+                    <h3>你的一生，值得一部电影</h3>
+                    <p>创业故事、家族记忆、人生转折……把它们变成影像，而不是朋友圈里的碎片。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <!-- ===== 套餐 ===== -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <span class="section-label">选择你的阵容</span>
+            <h2 class="section-title">定价透明 · 丰俭由人</h2>
+            <p class="section-desc">从全 AI 虚拟配角到真人卡司，每个故事都值得被认真对待。</p>
+            <div class="pricing-grid">
+                <!-- 入门 -->
+                <div class="pricing-card">
+                    <div class="pricing-name">入门 · 虚拟人生</div>
+                    <div class="pricing-price">¥58,000 <small>起<br />可根据需求灵活调整</small></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-user"></i> 真人主角（你或 OC）</li>
+                        <li><i class="fas fa-robot"></i> <strong>全 AI 虚拟配角</strong> <span class="muted">（独角戏、内心世界）</span></li>
+                        <li><i class="fas fa-clock"></i> 90 分钟 · 1080p 标准</li>
+                        <li><i class="fas fa-file-alt"></i> 不含剧本（需自备）</li>
+                        <li><i class="fas fa-calendar-alt"></i> 周期 4-6 周</li>
+                    </ul>
+                    <div  class="btn-card">
+                      
+                        <a href="tel:18680595674" style="color:#f5af19;"><i class="fas fa-phone"></i> 电话</a>
+                        <span style="color:#555; margin:0 8px;">·</span>
+                        <a href="weixin://" onclick="handleWeChat(event, 'art1798')" style="color:#f5af19;"> <i class="fab fa-weixin"></i> 微信 </a>
+                        <span style="color:#555; margin:0 8px;">·</span>
+                        <a href="mailto:wwpeng@outlook.com?subject=我想了解入门套餐（虚拟人生）&body=你好，我对「入门 · 虚拟人生」套餐感兴趣（¥58,000起）。%0D%0A%0D%0A我的联系方式：%0D%0A手机号：______%0D%0A微信：______%0D%0A%0D%0A我想咨询的问题是：______"style="color:#f5af19;"><i class="fas fa-envelope"></i>  邮件</a>
+                    </div>
+                </div>
+
+                <!-- 推荐 -->
+                <div class="pricing-card recommended">
+                    <div class="badge"><i class="fas fa-star"></i> 性价比首选</div>
+                    <div class="pricing-name">破次元伙伴</div>
+                    <div class="pricing-price">¥78,000 <small>起</small></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-user"></i> 真人主角 + <strong>1 位真人配角</strong></li>
+                        <li><i class="fas fa-robot"></i> AI 虚拟群演 <span class="muted">（丰富场景）</span></li>
+                        <li><i class="fas fa-clock"></i> 90 分钟 · 1080p 蓝光级</li>
+                        <li><i class="fas fa-file-alt"></i> <strong>含剧本精修</strong> <span class="muted">（提供大纲即可）</span></li>
+                        <li><i class="fas fa-calendar-alt"></i> 周期 6-8 周</li>
+                    </ul>
+                    <div  class="btn-card primary">
+                        
+                        <a href="tel:18680595674" style="color:#f5af19;"><i class="fas fa-phone"></i> 电话</a>
+                        <span style="color:#555; margin:0 8px;">·</span>
+                        <a href="weixin://" onclick="handleWeChat(event, 'art1798')" style="color:#f5af19;"> <i class="fab fa-weixin"></i> 微信 </a>
+                        <span style="color:#555; margin:0 8px;">·</span>
+                        <a href="mailto:wwpeng@outlook.com?subject=我想了解破次元伙伴套餐&body=你好，我对「破次元伙伴」套餐感兴趣（¥78,000起）。%0D%0A%0D%0A我的联系方式：%0D%0A手机号：______%0D%0A微信：______%0D%0A%0D%0A我想咨询的问题是：______"style="color:#f5af19;"><i class="fas fa-envelope"></i>  邮件</a>
+                    </div>
+                </div>
+
+                <!-- 豪华 -->
+                <div class="pricing-card">
+                    <div class="pricing-name">群星闪耀</div>
+                    <div class="pricing-price">¥180,000 <small>起</small></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-users"></i> 真人主角 +<strong>多位真人配角</strong> <span class="muted">（群像大戏）</span></li>
+                        <li><i class="fas fa-robot"></i> AI 虚拟群演 + 专业替身</li>
+                        <li><i class="fas fa-clock"></i> 90 分钟 · 1080p 蓝光级 + 院线调色</li>
+                        <li><i class="fas fa-file-alt"></i> <strong>剧本原创 / 深度定制</strong></li>
+                        <li><i class="fas fa-calendar-alt"></i> 周期 10-12 周</li>
+                    </ul>
+                     <div  class="btn-card">
+                       
+                        <a href="tel:18680595674" style="color:#f5af19;"><i class="fas fa-phone"></i> 电话</a>
+                        <span style="color:#555; margin:0 8px;">·</span>
+                        <a href="weixin://" onclick="handleWeChat(event, 'art1798')" style="color:#f5af19;"> <i class="fab fa-weixin"></i> 微信 </a>
+                        <span style="color:#555; margin:0 8px;">·</span>
+                        <a href="mailto:wwpeng@outlook.com?subject=我想了解群星闪耀套餐&body=你好，我对「群星闪耀」套餐感兴趣（¥180,000起）。%0D%0A%0D%0A我的联系方式：%0D%0A手机号：______%0D%0A微信：______%0D%0A%0D%0A我想咨询的问题是：______"style="color:#f5af19;"><i class="fas fa-envelope"></i>  邮件</a>
+                     </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px; color: #888; font-size: 15px; border-top: 1px solid rgba(255,255,255,0.04); padding-top: 32px;">
+                <i class="fas fa-info-circle" style="color: #f5af19; margin-right: 8px;"></i>
+                AI 虚拟配角基于先进算法生成，无需片酬、永不塌房，让预算 100% 用于故事本身。
+                <span style="display: block; margin-top: 6px; font-size: 14px; color: #666;">如需更多真人演员，可联系定制报价。</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 报价计算器 ===== -->
+    <section class="calculator" id="calculator">
+        <div class="container">
+            <span class="section-label">实时报价</span>
+            <h2 class="section-title">自定义你的电影配置</h2>
+            <p class="section-desc">选择以下选项，系统将为你生成专属报价。</p>
+            <div class="calc-wrap">
+                <div class="calc-options">
+                    <div class="calc-group">
+                        <label>🎭 配角配置 <span class="hint">—— 决定了故事阵容</span></label>
+                        <select id="calcSupporting">
+                            <option value="ai">全 AI 虚拟配角 ¥0</option>
+                            <option value="1real" selected>1 位真人配角 +¥20,000</option>
+                            <option value="multireal">多位真人配角 +¥80,000</option>
+                        </select>
+                    </div>
+                    <div class="calc-group">
+                        <label>📝 剧本服务 <span class="hint">—— 你有故事吗？</span></label>
+                        <select id="calcScript">
+                            <option value="none">自备剧本（无服务费）¥0</option>
+                            <option value="polish" selected>剧本精修 +¥15,000</option>
+                            <option value="original">原创 / 深度定制 +¥25,000</option>
+                        </select>
+                    </div>
+                    <div class="calc-group">
+                        <label>🎬 画质与时长 <span class="hint">—— 标准版已包含 90 分钟</span></label>
+                        <select id="calcQuality">
+                            <option value="standard">1080p 标准 ¥0</option>
+                            <option value="premium" selected>1080p 蓝光级 +¥15,000</option>
+                            <option value="cinema">4K 蓝光级 + 院线调色 +¥25,000</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="calc-result">
+                    <div class="total-label">预估总价</div>
+                    <div class="total-price" id="calcTotal">¥78,000</div>
+                    <div class="total-sub">不含税及差旅 · 最终以确认为准</div>
+
+                    <div  class="btn-card">
+                       
+                        <a href="tel:18680595674" style="color:#f5af19;"><i class="fas fa-phone"></i> 电话</a>
+                        <span style="color:#555; margin:0 8px;">·</span>
+                        <a href="weixin://" onclick="handleWeChat(event, 'art1798')" style="color:#f5af19;"> <i class="fab fa-weixin"></i> 微信 </a>
+                        <span style="color:#555; margin:0 8px;">·</span>
+                        <a href="mailto:wwpeng@outlook.com?subject=我想定制一部OC电影&body=你好，我在OC-FILM官网看到了定制服务，想为我的OC定制一部电影。%0D%0A%0D%0A【我的联系方式】%0D%0A手机号：______%0D%0A微信：______%0D%0A%0D%0A【剧本情况】%0D%0A□ 已有完整剧本%0D%0A□ 有大纲，需要精修%0D%0A□ 没有剧本，需要原创%0D%0A%0D%0A【其他需求或想问的问题】%0D%0A______%0D%0A%0D%0A期待回复！"  style="color:#f5af19;"> <i class="fas fa-envelope"></i> 邮件 </a>
+                     </div>
+                    <div class="breakdown">
+                        <span><span>基础制作费</span> <span id="bdBase">¥58,000</span></span>
+                        <span><span>配角配置</span> <span id="bdSupport">+¥20,000</span></span>
+                        <span><span>剧本服务</span> <span id="bdScript">+¥15,000</span></span>
+                        <span><span>画质升级</span> <span id="bdQuality">+¥15,000</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 流程 ===== -->
+<!-- ===== 流程 ===== -->
+<section class="process" id="process">
+    <div class="container">
+        <span class="section-label">如何开始</span>
+        <h2 class="section-title">六个步骤，银幕成真</h2>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-icon"> <i class="fas fa-comments"></i> <span class="step-num">01</span> </div>
+                <h4>需求沟通</h4> <p>了解你的故事与人设</p>
+            </div>
+            <div class="step">
+                <div class="step-icon"> <i class="fas fa-pen-fancy"></i> <span class="step-num">02</span> </div>
+                <h4>剧本 / 设定</h4> <p>大纲或完整剧本提交</p>
+            </div>
+            <div class="step">
+                <div class="step-icon"> <i class="fas fa-user-plus"></i> <span class="step-num">03</span> </div>
+                <h4>选角与建模</h4> <p>确定真人/AI 角色</p>
+            </div>
+            <div class="step">
+                <div class="step-icon"> <i class="fas fa-video"></i> <span class="step-num">04</span> </div>
+                <h4>拍摄 &amp; 模型训练</h4> <p>实拍 + AI 生成结合</p>
+            </div>
+            <div class="step">
+                <div class="step-icon"> <i class="fas fa-wand-magic-sparkles"></i> <span class="step-num">05</span> </div>
+                <h4>后期制作</h4> <p>剪辑、调色、音效</p>
+            </div>
+            <div class="step">
+                <div class="step-icon"> <i class="fas fa-film"></i> <span class="step-num">06</span> </div>
+                <h4>交付成片</h4> <p>你的专属电影</p>
+            </div>
+        </div>
+    </div>
 </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <span class="section-label">常见问题</span>
+            <h2 class="section-title">你可能想知道的</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h4><i class="fas fa-circle-question"></i> 5.8 万的套餐真能拍 90 分钟电影？会不会很“假”？</h4>
+                    <p>得益于 AI 技术成熟，背景角色、群演和部分配角可通过 AI 数字人高效生成，成本远低于传统实拍。在非特写、无复杂情绪互动的场景中，AI 表现足以以假乱真。我们将专业导演经验与技术结合，确保成片水准。</p>
+                </div>
+                <div class="faq-item">
+                    <h4><i class="fas fa-circle-question"></i> 我没有剧本，怎么办？</h4>
+                    <p>完全没问题。7.8 万及以上套餐已包含编剧服务。你可以提供大纲、人设甚至小说，我们为你转化为专业电影剧本。</p>
+                </div>
+                <div class="faq-item">
+                    <h4><i class="fas fa-circle-question"></i> 我想加更多真人配角，怎么算？</h4>
+                    <p>7.8 万套餐已包含 1 位重要真人配角。如需更多真人出演，请参考 18 万豪华套餐，或联系客服按角色单独报价。</p>
+                </div>
+                <div class="faq-item">
+                    <h4><i class="fas fa-circle-question"></i> 版权归谁？</h4>
+                    <p>成片版权 100% 归你所有。我们仅保留署名权和部分非商用展示权，具体以合同为准。</p>
+                </div>
+                <div class="faq-item">
+                    <h4><i class="fas fa-circle-question"></i> 制作周期大概多久？</h4>
+                    <p>根据套餐不同，入门级 4-6 周，推荐级 6-8 周，豪华级 10-12 周。具体时间取决于剧本复杂度和演员档期。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 页脚 ===== -->
+    <footer class="container footer">
+        <div class="footer-col">
+            <h5 style="font-size:22px; font-weight:800; background:linear-gradient(135deg,#f5af19,#f12711); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom:12px;">OC-FILM</h5>
+            <p style="color:#666; font-size:14px;">为每一个故事而生，<br />让每一个 OC 都能站在银幕中央。</p>
+        </div>
+        <div class="footer-col">
+            <h5>产品</h5>
+            <a href="#pricing">套餐</a>
+            <a href="#calculator">报价计算</a>
+            
+        </div>
+        <div class="footer-col">
+            <h5>支持</h5>
+            <a href="#faq">常见问题</a>
+            <p>服务条款</p>
+            <p>隐私政策</p>
+        </div>
+       <div class="footer-col" id="lx">
+        <h5>联系</h5>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+                <a href="mailto:wwpeng@outlook.com"><i class="fas fa-envelope"></i>  邮件</a>
+                <a href="weixin://" onclick="handleWeChat(event, 'art1798')"><i class="fab fa-weixin"></i> 微信</a>
+                <a href="tel:18680595674"><i class="fas fa-phone"></i> 电话</a>
+            </div>
+        </div>
+        <div class="footer-bottom"><span>© 2026 OC-FILM.COM — 保留所有权利</span></div>
+    </footer>
+
+
+
+        <script>
+        function handleWeChat(event, wechatId) {
+            // 检测是否为手机设备
+            const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            if (!isMobile) {
+                // PC端：直接复制
+                event.preventDefault();
+                copyWechat(wechatId);
+                return;
+            }
+
+            // 手机端：尝试打开微信，但设置一个超时兜底
+            // 注意：无法精确检测是否成功打开，所以用定时器 + 用户主动确认
+            setTimeout(() => {
+                // 如果3秒后用户还在当前页面，说明可能没打开微信
+                // 询问用户是否需要复制微信号
+                if (confirm("微信未成功打开？点击「确定」复制微信号手动添加")) {
+                    copyWechat(wechatId);
+                }
+            }, 3000);
+            // 注意：这里不能阻止默认行为，让 href="weixin://" 正常执行
+        }
+
+        function copyWechat(wechatId) {
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(wechatId).then(() => {
+                    alert("✅ 微信号已复制: " + wechatId);
+                }).catch(() => {
+                    fallbackCopy(wechatId);
+                });
+            } else {
+                fallbackCopy(wechatId);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const input = document.createElement('input');
+            input.value = text;
+            input.style.position = 'fixed';
+            input.style.opacity = '0';
+            document.body.appendChild(input);
+            input.select();
+            try {
+                document.execCommand('copy');
+                alert("✅ 微信号已复制: " + text);
+            } catch (e) {
+                alert("请手动复制微信号: " + text);
+            }
+            document.body.removeChild(input);
+        }
+    </script>
+
+
+    <!-- ===== 计算器脚本 ===== -->
+    <script>
+        const calcSupporting = document.getElementById('calcSupporting');
+        const calcScript = document.getElementById('calcScript');
+        const calcQuality = document.getElementById('calcQuality');
+        const totalEl = document.getElementById('calcTotal');
+        const bdBase = document.getElementById('bdBase');
+        const bdSupport = document.getElementById('bdSupport');
+        const bdScript = document.getElementById('bdScript');
+        const bdQuality = document.getElementById('bdQuality');
+
+        function updatePrice() {
+            // 基础价（以入门套餐为基准）
+            let base = 58000;
+
+            // 配角加成
+            const supportMap = { ai: 0, '1real': 20000, multireal: 80000 };
+            const supportLabel = { ai: '+¥0', '1real': '+¥20,000', multireal: '+¥80,000' };
+            const supportPrice = supportMap[calcSupporting.value] || 0;
+
+            // 剧本加成
+            const scriptMap = { none: 0, polish: 15000, original: 25000 };
+            const scriptLabel = { none: '+¥0', polish: '+¥15,000', original: '+¥25,000' };
+            const scriptPrice = scriptMap[calcScript.value] || 0;
+
+            // 画质加成
+            const qualityMap = { standard: 0, premium: 15000, cinema: 25000 };
+            const qualityLabel = { standard: '+¥0', premium: '+¥15,000', cinema: '+¥25,000' };
+            const qualityPrice = qualityMap[calcQuality.value] || 0;
+
+            const total = base + supportPrice + scriptPrice + qualityPrice;
+
+            totalEl.textContent = '¥' + total.toLocaleString();
+            bdBase.textContent = '¥' + base.toLocaleString();
+            bdSupport.textContent = supportLabel[calcSupporting.value];
+            bdScript.textContent = scriptLabel[calcScript.value];
+            bdQuality.textContent = qualityLabel[calcQuality.value];
+        }
+
+        calcSupporting.addEventListener('change', updatePrice);
+        calcScript.addEventListener('change', updatePrice);
+        calcQuality.addEventListener('change', updatePrice);
+
+        // 初始化
+        updatePrice();
+    </script>
 
 </body>
 </html>
