@@ -17,7 +17,7 @@
         .container {
             max-width: 1280px;
             margin: 0 auto;
-            padding: 0 32px;
+            padding: 0 12px;
         }
 
         /* ===== 滚动条 ===== */
@@ -650,13 +650,14 @@
             grid-template-columns: 2fr 1fr 1fr 1fr;
             gap: 40px;
             border-top: 1px solid rgba(255, 255, 255, 0.04);
-            
+            text-align: center;
         }
         .footer-col h5 {
             font-size: 14px;
             font-weight: 600;
             margin-bottom: 16px;
             color: #fff;
+            text-align: center;
         }
         .footer-col a,
         .footer-col p {
@@ -755,7 +756,7 @@
                 padding: 8px 16px;
             }
             .container {
-                padding: 0 20px;
+                padding: 0 10px;
             }
             .section-title {
                 font-size: 30px;
@@ -794,6 +795,7 @@
                 font-size: 34px;
             }
              .btn-card a{text-decoration: none;   font-size: 14px;}
+             .container {padding: 0 7px; }
         }
 
         /* ===== 移动端导航适配 ===== */
@@ -826,6 +828,7 @@
                 padding: 6px 14px;
             }
             .btn-card a{text-decoration: none;   font-size: 14px;}
+             .container {padding: 0 7px; }
         }
 
 
@@ -911,6 +914,7 @@
                 right: -6px;
             }
             .btn-card a{text-decoration: none;   font-size: 14px;}
+             .container {padding: 0 7px; }
         }
       a{text-decoration: none;}
       
