@@ -46,20 +46,85 @@
     
     <!-- ===== 结构化数据（JSON-LD）让搜索结果展示星级/价格/时间 ===== -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "name": "OC电影定制服务",
-        "description": "提供个人纪念日微电影、企业宣传片、婚礼MV、短剧、电影等专业影片制作服务",
-        "provider": {
-            "@type": "Organization",
-            "name": "OC电影定制"
+      "@type": "Organization",
+      "name": "OC 电影",
+      "url": "https://www.oc-film.com",
+      "description": "AI 辅助的定制电影制作服务，面向内容创作者、网红、博主和企业主，交付 90 分钟成片。",
+      "areaServed": "全球"
+    },
+    {
+      "@type": "Service",
+      "name": "AI 电影定制",
+      "provider": { "@type": "Organization", "name": "OC 电影" },
+      "description": "真人主角与 AI 数字人配角混合出演的定制电影，90 分钟成片，4K/1080p 交付。",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "入门 · 虚拟人生",
+          "price": "58000",
+          "priceCurrency": "CNY",
+          "description": "真人主角，全 AI 虚拟配角，90 分钟 1080p，不含剧本，周期 4-6 周"
         },
-        "serviceType": "影片制作",
-        "areaServed": "全球",
-        "availableLanguage": ["中文", "English"]
+        {
+          "@type": "Offer",
+          "name": "推荐 · 破次元伙伴",
+          "price": "78000",
+          "priceCurrency": "CNY",
+          "description": "真人主角 + 1 位真人配角，AI 群演，含剧本精修，周期 6-8 周"
+        },
+        {
+          "@type": "Offer",
+          "name": "豪华 · 群星闪耀",
+          "price": "180000",
+          "priceCurrency": "CNY",
+          "description": "真人主角 + 多位真人配角，AI 群演 + 替身，院线调色，含原创剧本，周期 10-12 周"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "AI 电影定制一般多少钱？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "起步约 5.8 万元，主流方案 7.8 万元起，豪华方案 18 万元起。价格取决于真人演员数量、是否含剧本和画质等级。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "5.8 万的 AI 电影套餐真能拍 90 分钟吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。交付 90 分钟 1080p 成片，真人主角由客户出演，AI 负责虚拟配角和群演，非特写场景中表现足以以假乱真。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "没有剧本可以只提供大纲吗？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以。7.8 万及以上套餐包含编剧服务，提供大纲、人设或小说即可转化为专业剧本。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AI 电影成片版权归谁？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "成片版权 100% 归客户所有，OC 电影仅保留署名权和部分非商用展示权。"
+          }
+        }
+      ]
     }
-    </script>
+  ]
+}
+</script>
     
     <!-- ===== Google Font & Font Awesome ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
